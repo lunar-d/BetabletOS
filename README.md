@@ -1,9 +1,8 @@
-# Electron ShoppingList Desktop App
+# BetabletOS
 
-This is a cross platform shoppinglist desktop application built on electron
 
 ### Version
-1.0.0
+0.0.1
 
 ## Usage
 
