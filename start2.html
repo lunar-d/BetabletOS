@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>BetabletOS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="node_modules\materialize-css\dist\css\materialize.min.css">
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
   <link rel="stylesheet" href="assets\css\custom.css">
 </head>
 <body>
@@ -18,19 +19,54 @@
             </nav>
         <div class="container">
           <div class="jumbotron" id="tagline">     
-            <h1 class="header center blue-text">USERNAME</h1>
+            <h2 class="header center blue-text">A propos de vous</h2>
             <div class="row center">
-              <h5 class="header col s12 light">...</h5>
+              <h7 class="header col s12 light">Ces informations servent a protéger la Betablet</h7>
+               
+              <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input placeholder="Michel" id="first_name" type="text" class="validate">
+                        <label for="first_name">Nom</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input placeholder="Bertrand" id="last_name" type="text" class="validate">
+                        <label for="last_name">Prenom</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="azerty123" id="password" type="password" class="validate">
+                        <label for="password">Mot de passe</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input placeholder="exemple@exemple.fr" id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <button class="waves-effect waves-light btn-large blue" type="submit">Confirmer</button>
+                  </form>
+                </div>
             </div>
           </div>
   
-          <div class="row center">
-            <a href="start3.html" id="start-button" class="btn-large waves-effect waves-light blue">Suivant-></a>
-          </div>
+          
         </div>
-      </div>
-    </div>
+  </div>
 
-</div>
+  <script>
+    const electron = require('electron');
+    const {ipcRenderer} = electron;
+
+    document.querySelector('form').addEventListener('submit', submitForm);
+
+    function submitForm(e){
+      
+    }
+  </script>
+
 </body>
 </html>

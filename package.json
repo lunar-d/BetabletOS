@@ -12,10 +12,10 @@
   "author": "Giaccone&Gayet",
   "license": "WTFPL",
   "dependencies": {
-    "electron": "^1.7.6",
-    "materialize-css": "^1.0.0-rc.2"
+    "electron": "^4.1.1",
+    "materialize-css": "^1.0.0"
   },
   "devDependencies": {
-    "electron-packager": "^9.0.1"
+    "electron-packager": "^13.1.1"
   }
 }

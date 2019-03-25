@@ -4,3 +4,7 @@
     margin-right:auto;
 }
 
+.lighten-1{
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
