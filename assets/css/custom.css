@@ -8,3 +8,9 @@
     -webkit-user-select: none;
     -webkit-app-region: drag;
 }
+
+.stick {
+    position:absolute;
+    bottom:0;
+    width:100%;
+  }

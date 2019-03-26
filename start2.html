@@ -25,6 +25,7 @@
                
               <div class="row">
                   <form class="col s12">
+                    
                     <div class="row">
                       <div class="input-field col s6">
                         <input placeholder="Michel" id="first_name" type="text" class="validate">
@@ -47,8 +48,13 @@
                         <label for="email">Email</label>
                       </div>
                     </div>
+
                     <button class="waves-effect waves-light btn-large blue" type="submit">Confirmer</button>
+
                   </form>
+
+                  <button class="waves-effect waves-light btn grey" type="submit" onclick="window.location.replace('start3.html');">Passer</button>
+
                 </div>
             </div>
           </div>
@@ -63,8 +69,8 @@
 
     document.querySelector('form').addEventListener('submit', submitForm);
 
-    function submitForm(e){
-      
+    function submitForm(){
+      window.location.replace("start3.html");
     }
   </script>
 

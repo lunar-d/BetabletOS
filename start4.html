@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BetabletOS</title>
+  <link rel="stylesheet" href="node_modules\materialize-css\dist\css\materialize.min.css">
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="assets\css\custom.css">
+</head>
+<body>
+  
+<div id="pt-main" class="pt-perspective">
+
+  <div class="pt-page pt-page-4">
+    <header>      
+    <nav class="light-blue lighten-1">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Informations</a>  
+      </div>
+    </nav>
+    </header>  
+
+        <main>
+        <div class="container">
+          <div class="jumbotron" id="tagline">     
+            <img src="assets\logo\XPM_BADGING_GoogleAssistant_ico.png" alt="Banner" class="logo">       
+            <div class="row center">
+                <h5 class="header col s12 light">Fonctionne avec Google Assistant</h5>
+              <p class="header col s12 light">Rencontrez votre assistant Google personnel.
+                  Posez-lui des questions. Dis-lui de faire des choses. C'est votre seul Google personnel, toujours prêt à vous aider.
+                  
+                  Pour obtenir de l'aide de votre assistante
+                  Dites "Ok Google".</p>
+            </div>
+          </div>
+  
+          <div class="row center">
+            <a href="#" id="start-button" class="btn-large waves-effect waves-light blue">Suivant-></a>
+          </div> 
+
+        </div>
+        </main>
+
+        <footer class="page-footer blue stick">
+            <span class="grey-text text-lighten-4">  ©2018 Google LLC All rights reserved. Google Assistant™ virtual personal assistant is a trademark of Google LLC. </span>
+                <a class="grey-text text-lighten-4 right" onclick="myFunction()" href="#">Terms and Conditions</a>
+        </footer>
+
+      </div>
+    </div>
+
+    
+</body>
+<script>
+    function myFunction() {
+        const remote = require('electron').remote;
+    const BrowserWindow = remote.BrowserWindow;
+
+    var win = new BrowserWindow({ width: 800, height: 600 });
+    win.open('https://github.com', '_blank', 'nodeIntegration=no')
+      }
+    </script>
+
+</html>
