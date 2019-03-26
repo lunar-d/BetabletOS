@@ -62,28 +62,10 @@ ipcMain.on('item:add', function(e, item){
 const DebugMENU =  [
   // Each object is a dropdown
   {
-    label: 'DEBUG',
-    submenu:[
-      {
-        label:'selection wifi',
-        click(){
-          createWifiWindow();
-        }
-      },
-      {
-        label:'Clear Items',
-        click(){
-          mainWindow.webContents.send('item:clear');
-        }
-      },
-      {
-        label: 'Quit',
-        accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-        click(){
-          app.quit();
-        }
-      }
-    ]
+    label: 'Retour',
+    click(){
+      remote.getCurrentWindow().minimize(); 
+    }
   }
 ];
 
@@ -105,6 +87,30 @@ if(process.env.NODE_ENV !== 'production'){
         accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
         click(item, focusedWindow){
           focusedWindow.toggleDevTools();
+        }
+      }
+    ]
+  });
+  DebugMENU.push({
+    label: 'DEBUG',
+    submenu:[
+      {
+        label:'selection wifi',
+        click(){
+          createWifiWindow();
+        }
+      },
+      {
+        label:'Clear Items',
+        click(){
+          mainWindow.webContents.send('item:clear');
+        }
+      },
+      {
+        label: 'Quit',
+        accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+        click(){
+          app.quit();
         }
       }
     ]

@@ -55,8 +55,21 @@
         const remote = require('electron').remote;
     const BrowserWindow = remote.BrowserWindow;
 
-    var win = new BrowserWindow({ width: 800, height: 600 });
-    win.open('https://github.com', '_blank', 'nodeIntegration=no')
+    /* var win = new BrowserWindow({
+      width: 300,
+      height:200,
+      title:'Terms and Conditions'
+    }); */
+
+    // Create new window
+    var newWindow = new BrowserWindow({width: 1024, height: 600, fullscreen:false, frame: true, titleBarStyle: 'hidden'}); //note le titlebar est pour les Mac
+    var myURL = 'https://developers.google.com/actions/console/terms-of-service';
+      // Load html in window
+      newWindow.webContents.on('did-finish-load', ()=>{
+        newWindow.show();
+        newWindow.focus();
+        });
+        newWindow.loadURL(myURL);
       }
     </script>
 
