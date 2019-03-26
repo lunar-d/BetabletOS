@@ -1,8 +1,8 @@
+
 # BetabletOS
-
-
+![demo](https://github.com/lunar-d/BetabletOS/raw/master/assets/demo/alph1.png)
 ### Version
-0.0.1
+0.0.1_1
 
 ## Usage
 
