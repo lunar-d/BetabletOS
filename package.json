@@ -1,0 +1,27 @@
+{
+  "name": "betabletos",
+  "version": "0.0.1",
+  "description": "betabletos est l'application pricipale de la betablet.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunar-d/BetabletOS.git"
+  },
+  "keywords": [
+    "electronJS"
+  ],
+  "author": "lunar-d",
+  "license": "WTFPL",
+  "dependencies": {
+    "electron": "3.0.13",
+    "xel": "0.0.199",
+    "clock": "1.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/lunar-d/BetabletOS/issues"
+  },
+  "homepage": "https://github.com/lunar-d/BetabletOS#readme"
+}

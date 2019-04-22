@@ -1,0 +1,103 @@
+<!--  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Déclare l'utf8 -->
+    <meta charset="UTF-8">
+
+    <!-- activation du farmwork Xel theme material-->
+    <link rel="stylesheet" href="node_modules/xel/themes/material.css">
+    <script src="node_modules/xel/xel.min.js"></script>
+
+    <!-- Link fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+    <!-- style de pages -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- IMPORT DES SOUS PAGES (sections) -->
+    
+        <!-- section parametres -->
+            <!-- menu des parametres (main) -->
+            <link rel="import" href="sections/options/menu.html">
+            <!-- sous menu -->
+
+            <!-- plus d'info -->
+            <link rel="import" href="sections/options/infos.html">
+        
+        <!-- *FIN* section parametres *FIN* -->
+
+        <!-- section premiére utilisation -->
+            <!-- page preparation (main) -->
+            <link rel="import" href="sections/ini/startup.html">
+
+        <!-- *FIN* section premiére utilisation *FIN* -->
+
+    <!-- FIN DES IMPORT -->
+    <script>
+    </script>
+  </head>
+  <body onload="start()">
+        <x-button>
+                <x-icon name="settings"></x-icon>
+                <dialog>option</dialog>
+                <style>
+                        dialog {
+                          width: 300px;
+                          height: 100%;
+                          right: 0;
+                          left: auto;
+                        }
+                      </style>
+        </x-button>
+        <x-box vertical>
+            <x-card id ="datebox">
+                <header>
+                    <strong id="date"></strong>
+                </header>
+                <main>
+                    <span id="heure"></span><span id="seconds"></span>
+                </main>
+            </x-card>
+            <x-card id ="meteobox">
+                    <header>
+                        <strong>Meteo</strong>
+                    </header>
+                    <main>
+                        <span>dev</span>
+                    </main>
+            </x-card>
+        </x-box>
+        <x-box>
+            <x-card id ="newsbox">
+                    <header>
+                        <strong>News</strong>
+                    </header>
+                    <main>
+                        <span>dev</span>
+                    </main>
+            </x-card>
+        </x-box>
+            <x-card id ="sherchbox">
+                    <main>
+                            <x-input>
+                                    <x-label>Recherche internet / assistant vocal</x-label>
+                            </x-input>
+                            <x-buttons tracking='-1'>
+                                <x-button>
+                                    <x-label><x-icon name="search"></x-icon></x-label>
+                                </x-button>
+                                <x-button>
+                                    <x-label><x-icon name="assistant"></x-icon></x-label>
+                                </x-button>
+                            </x-buttons>
+                            
+                            
+                    </main>
+                </x-card>
+            
+        
+        <script src="./assets/date_heure.js"></script>
+        
+  </body>
+</html>
